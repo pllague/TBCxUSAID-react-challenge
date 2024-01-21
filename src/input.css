@@ -12,6 +12,7 @@
 
 body {
     font-family: 'tbc-font', Arial, Helvetica, sans-serif;
-    --scrollbar-width: 0px;
+    font-size:10px;
+    color:#f4f4f4;
     background-color: #161616;
 }

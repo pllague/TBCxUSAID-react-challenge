@@ -11,8 +11,8 @@
   <header data-position="top" class="bg-secondary/95 data-[position=top]:bg-secondary/100 p-5 sticky top-0 transition-all duration-300 ease-in-out h-[69px] lg:h-[84px]">
     <div class="flex justify-between lg:items-center w-full max-w-[980px] mx-auto">
       <!-- TBC Logo -->
-      <a class="w-[130px] h-[29px] lg:w-[182px] lg:h-[10]" href="./index.html">
-        <svg class = "w-full h-full " preserveAspectRatio="xMidYMid meet" data-bbox="-0.049 -0.035 160.05 35.031" xmlns="http://www.w3.org/2000/svg" viewBox="-0.049 -0.035 160.05 35.031" height="36" width="160" data-type="color" role="presentation" aria-hidden="true">
+      <a class="w-[130px] h-[29px] lg:w-[182px] lg:h-10" href="./index.html">
+        <svg class = "w-full h-full" preserveAspectRatio="xMidYMid meet" data-bbox="-0.049 -0.035 160.05 35.031" xmlns="http://www.w3.org/2000/svg" viewBox="-0.049 -0.035 160.05 35.031" height="36" width="160" data-type="color" role="presentation" aria-hidden="true">
           <g>
               <g clip-path="url(#b290f575-40bd-4c29-b19c-ded35374c9f9_comp-ktjxmlim)">
                   <path fill="#00ADEE" d="M17.72 20.126a3.738 3.738 0 0 1-1.187 3.079A42.393 42.393 0 0 1 3.49 31.5a6 6 0 0 1-1.37.365 1.043 1.043 0 0 1-1.258-1.083 2.46 2.46 0 0 1 .137-.652C2.27 26.49 6.62 18.587 8.472 15.326c2.315-4.076 8.4-13.898 9.32-15a.332.332 0 0 1 .398-.098c.15.079.267.17.117.711-.796 2.915-1.956 9.255-.756 17.91.065.456.123.86.156 1.245" data-color="1"></path>
@@ -73,9 +73,28 @@
     </div>
   </header>
   <!-- Main -->
-  <main  class = "h-screen flex flex-col justify-between text-tbc_white">
+  <main  class = "h-screen flex flex-col justify-between">
     <!-- Section Hero -->
-    <section class = "relative w-screen">
+    <section class = "relative w-full">
+      <!-- Mobile hero image -->
+      <img class="w-full object-cover object-center lg:hidden"
+      src="https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_619,h_420,al_c,q_80,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg"
+      alt="hero image">
+      <!-- Desktop hero-->
+      <img class="w-full h-[352px] object-cover object-center hidden lg:block 2xl:hidden"
+      src="https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1201,h_352,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg"
+      alt="hero image ">
+      <!-- Desktop hero 2xl-->
+      <img class="w-full h-[352px] object-cover object-center hidden 2xl:block"
+      src="https://static.wixstatic.com/media/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg/v1/fill/w_1920,h_266,al_c,q_85,enc_auto/93e8a3_9fa23196ddf6427a9da574e2b31a13d2~mv2.jpg"
+      alt="hero image">
+     <div class="absolute top-0 left-0 w-full h-full px-5">
+       <div class="max-w-[980px] h-full mx-auto my-auto mt-[50px] lg:mt-[96px] font-[arial]">
+         <h3 class="text-tbc_white font-bold text-[24px] leading-[38px] lg:text-[42px] lg:leading-[67px] ">TBC x USAID
+         </h3>
+         <h3 class="text-tbc_white font-[tbc-font] font-bold text-[22px] leading-[38px] lg:text-[34px] lg:leading-[67px]">ტექნოლოგიური განათლებისთვის</h3>
+       </div>
+     </div>
     </section>
     <section></section>
     <section></section>
