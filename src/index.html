@@ -8,8 +8,8 @@
   <title>TBC x USAID</title>
 </head>
 <body>
-  <header data-position="top" data-hidden="false" class="bg-secondary/95 data-[position=top]:bg-secondary/100 data-[hidden=true]:h-0 p-5 data-[hidden=true]:py-0 sticky top-0 transition-all overflow-hidden duration-300 ease-in-out h-[69px] lg:h-[84px]">
-    <div class="flex justify-between items-center w-full max-w-[980px] mx-auto">
+  <header data-position="top" class="bg-secondary/95 data-[position=top]:bg-secondary/100 p-5 sticky top-0 transition-all duration-300 ease-in-out h-[69px] lg:h-[84px]">
+    <div class="flex justify-between lg:items-center w-full max-w-[980px] mx-auto">
       <!-- TBC Logo -->
       <a class="w-[130px] h-[29px] lg:w-[182px] lg:h-[10]" href="./index.html">
         <svg class = "w-full h-full " preserveAspectRatio="xMidYMid meet" data-bbox="-0.049 -0.035 160.05 35.031" xmlns="http://www.w3.org/2000/svg" viewBox="-0.049 -0.035 160.05 35.031" height="36" width="160" data-type="color" role="presentation" aria-hidden="true">
@@ -41,7 +41,7 @@
         </svg>
       </a>
       <!-- Mobile Menu Hamburger -->
-      <div class="mobile-hamburger z-10 group peer  h-[21px] w-[26px] transform aspect-square cursor-pointer lg:hidden flex flex-col transition-all duration-300 ease-in-out justify-between ">
+      <div class="mobile-hamburger z-30 group peer  h-[21px] w-[26px] transform aspect-square cursor-pointer lg:hidden flex flex-col transition-all duration-300 ease-in-out justify-between">
         <div
           class="rounded-[1.5px] group-[.active]:-translate-y-px origin-right h-[3px] w-1/2 transform bg-white group-[.active]:bg-light_brown transition-all duration-700 ease-in-out group-[.active]:-rotate-90">
         </div>
@@ -53,7 +53,7 @@
         </div>
       </div>
       <!-- Main Navigation -->
-      <nav class = "pt-20 lg:pt-0 absolute lg:relative w-full overflow-hidden max-w-0 transition-all ease-in-out duration-300 peer-[.active]:max-w-[calc(100%-145px)] lg:max-w-[454px] right-0 top-0 lg:block bg-tbc_brown h-screen lg:h-full lg:bg-transparent">
+      <nav class = "pt-20 absolute w-full overflow-hidden max-w-0 transition-all ease-in-out duration-300 peer-[.active]:max-w-[calc(100%-120px)]  right-0 top-0 bg-tbc_brown h-screen lg:relative lg:pt-0  lg:block lg:h-full lg:max-w-[454px] lg:bg-transparent z-20">
         <ul class = "flex w-full flex-col lg:flex-row lg:justify-between lg:items-center items-end min-w-0 text-tbc_white">
           <li class = "cursor-pointer pr-[10px] lg:pr-0">
             <a class = "hover:text-tbc_blue text-sm leading-[52px] lg:leading-[26px] transition duration-[400ms] ease-linear" href="https://www.tbcacademy.ge/">მთავარი</a>
@@ -69,11 +69,14 @@
           </li>
         </ul>
       </nav>
+      <div class = "absolute hidden peer-[.active]:block bg-primary/60 top-0 left-0 w-screen h-screen z-10 "></div>
     </div>
   </header>
   <!-- Main -->
   <main  class = "h-screen flex flex-col justify-between text-tbc_white">
-    <section></section>
+    <!-- Section Hero -->
+    <section class = "relative w-screen">
+    </section>
     <section></section>
     <section></section>
     <section></section>
