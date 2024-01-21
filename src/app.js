@@ -48,3 +48,54 @@ window.addEventListener('load', () => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".slider");
+    const slides = slider.children;
+    const dots = document.querySelectorAll(".dots");
+    const prevArrow = document.querySelector(".prev-arrow");
+    const nextArrow = document.querySelector(".next-arrow");
+    let currentIndex = 0;
+    let slideInterval;
+
+    function scrollToSlide(index) {
+        const width = slider.clientWidth;
+        slider.scrollLeft = width * index;
+        currentIndex = index;
+        updateDots();
+    }
+
+    function updateDots() {
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("bg-gray-500", index === currentIndex); // Change the color to indicate active dot
+        });
+    }
+
+    function startSlideShow() {
+        slideInterval = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % slides.length;
+            scrollToSlide(nextIndex);
+        }, 3000); // Change slide every 3 seconds
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => scrollToSlide(index));
+    });
+
+    prevArrow.addEventListener("click", () => {
+        let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+        scrollToSlide(prevIndex);
+    });
+
+    nextArrow.addEventListener("click", () => {
+        let nextIndex = (currentIndex + 1) % slides.length;
+        scrollToSlide(nextIndex);
+    });
+
+    startSlideShow();
+
+    // Pause the slideshow on hover
+    slider.addEventListener("mouseenter", () => clearInterval(slideInterval));
+    slider.addEventListener("mouseleave", startSlideShow);
+});
