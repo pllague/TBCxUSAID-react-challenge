@@ -6,8 +6,19 @@ menuBurger.addEventListener('click', () => {
     menuBurger.classList.toggle('-rotate-45');
     menuBurger.classList.toggle('h-[33.23px]');
     menuBurger.classList.toggle('w-[33.23px]');
+    document.body.classList.toggle('overflow-hidden');
 });
 
+// If user clicks outside the menu, close it
+window.addEventListener('click', (e) => {
+    if (e.target !== menuBurger && !menuBurger.contains(e.target) && menuBurger.classList.contains('active')) {
+        menuBurger.classList.toggle('active');
+        menuBurger.classList.toggle('-rotate-45');
+        menuBurger.classList.toggle('h-[33.23px]');
+        menuBurger.classList.toggle('w-[33.23px]'); 
+        document.body.classList.toggle('overflow-hidden');
+    }
+});
 
 // Hide/Appear header while scrolling on mobile version
 const header = document.querySelector('header');
