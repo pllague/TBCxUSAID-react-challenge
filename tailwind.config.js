@@ -10,6 +10,7 @@ module.exports = {
         tbc_blue: "#00a3e0",
         tbc_brown: "#222222",
         light_brown: "#767676",
+        lightgrey: "#2B2B2B",
       },
     },
   },
