@@ -29,7 +29,7 @@
 
 2. **Open the project folder**: `TBCxUSAID-react-challenge` Navigate to the `src` directory and open the `index.html` file in your browser.
 
-**`or`**
+    **`or`**
 
 3. **Use GitHub Pages**: You can also access the page using the following [GitHub Pages link](https://pllague.github.io/TBCxUSAID-react-challenge/src/index.html).
 
