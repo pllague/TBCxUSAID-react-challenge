@@ -27,7 +27,7 @@
     git clone git@github.com:pllague/TBCxUSAID-react-challenge.git
     ```
 
-2. **Open the project folder**: `TBCxUSAID-react-challenge' Navigate to the src` directory and open the `index.html` file in your browser.
+2. **Open the project folder**: `TBCxUSAID-react-challenge` Navigate to the `src` directory and open the `index.html` file in your browser.
 
 **`or`**
 
