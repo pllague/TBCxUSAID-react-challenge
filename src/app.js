@@ -99,3 +99,18 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.addEventListener("mouseenter", () => clearInterval(slideInterval));
     slider.addEventListener("mouseleave", startSlideShow);
 });
+
+// Open Accordions on click
+const accordions = document.querySelector('.accordions');
+
+accordions.addEventListener('click', (e) => {
+    if (e.target.classList.contains('accordion')) {
+        e.target.classList.toggle('active');
+    }
+    const acoordioItems = accordions.querySelectorAll('.accordion');
+    acoordioItems.forEach((item) => {
+        if (item !== e.target) {
+            item.classList.remove('active');
+        }
+    });
+});
