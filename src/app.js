@@ -114,3 +114,59 @@ accordions.addEventListener('click', (e) => {
         }
     });
 });
+
+// Privacy
+const privacy = document.querySelectorAll('.open-privacy');
+const privacyDetails = document.querySelector('.privacy-details');
+const privacyDetailsChild = document.querySelector('.privacy-details-child');
+
+privacy.forEach((item) => {
+    item.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyDetails.classList.toggle('active');
+        setTimeout(() => {
+            privacyDetailsChild.classList.toggle('active');
+        }, 300);
+    });
+});
+
+const closePrivacyButtons = document.querySelectorAll('.close-privacy-window');
+
+closePrivacyButtons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        privacyDetailsChild.classList.toggle('active');
+        setTimeout(() => {
+            privacyDetails.classList.toggle('active');
+        }, 300);
+    });
+});
+
+const privacyDetailsChildOutside = document.querySelectorAll('.privacy-details-child');
+
+document.addEventListener('click', function (event) {
+    // Check if the click is outside privacyDetailsChild
+    let isClickInside = Array.from(privacyDetailsChildOutside).some(child => child.contains(event.target));
+
+    if (!isClickInside && privacyDetailsChildOutside[0].classList.contains('active')) {
+        // Close privacyDetailsChild
+        privacyDetailsChildOutside.forEach(child => {
+            child.classList.remove('active');
+        });
+
+        // Wait 0.3s then close privacyDetails
+        setTimeout(() => {
+            privacyDetails.classList.remove('active');
+        }, 300);
+    }
+});
+
+// Close when user press escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && privacyDetails.classList.contains('active')) {
+        privacyDetailsChild.classList.toggle('active');
+        setTimeout(() => {
+            privacyDetails.classList.toggle('active');
+        }, 300);
+    }
+});
